@@ -1,0 +1,10 @@
+
+a
+java:S2789$"FEnsure this "Optional" could never be null and remove this null-check.(ÂØ£åÿÿÿÿÿ
+S
+java:S3655%"8Call "sOptional.isPresent()" before accessing the value.(‚¿€¿þÿÿÿÿ
+^
+java:S2583$"CChange this condition so that it does not always evaluate to "true"(ÂØ£åÿÿÿÿÿ
+T
+java:S1128
+"2Remove this unused import 'java.util.Collections'.(¢³ïÓþÿÿÿÿ8É×À×—0

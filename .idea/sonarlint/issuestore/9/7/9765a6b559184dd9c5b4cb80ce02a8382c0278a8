@@ -1,0 +1,55 @@
+
+\
+java:S2259i"AA "NullPointerException" could be thrown; "fis" is nullable here.(ß¶­†ÿÿÿÿÿ
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¾û¥Ï
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¡ËÛù
+t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(á‘Ð©þÿÿÿÿ
+t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(í‹à¤üÿÿÿÿ
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¾û¥Ï
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¡ËÛù
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(á‘Ð©þÿÿÿÿ
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(í‹à¤üÿÿÿÿ
+V	java:S125,"<This block of commented-out lines of code should be removed.(„£ËÂûÿÿÿÿ
+Q	java:S125R"<This block of commented-out lines of code should be removed.(—’üú
+O
+java:S1144x"2Remove this unused private "connectServer" method.(ª¼Î“8ùòÊà0
+\
+java:S2259i"AA "NullPointerException" could be thrown; "fis" is nullable here.(ß¶­†ÿÿÿÿÿ
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¾û¥Ï
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¡ËÛù
+t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(á‘Ð©þÿÿÿÿ
+t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(í‹à¤üÿÿÿÿ
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¾û¥Ï
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¡ËÛù
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(á‘Ð©þÿÿÿÿ
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(í‹à¤üÿÿÿÿ
+V	java:S125,"<This block of commented-out lines of code should be removed.(„£ËÂûÿÿÿÿ
+Q	java:S125R"<This block of commented-out lines of code should be removed.(—’üú
+H
+java:S1144x"2Remove this unused private "connectServer" method.(ª¼Î“
+\
+java:S2259i"AA "NullPointerException" could be thrown; "fis" is nullable here.(ß¶­†ÿÿÿÿÿ
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¾û¥Ï
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¡ËÛù
+t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(á‘Ð©þÿÿÿÿ
+t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(í‹à¤üÿÿÿÿ
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¾û¥Ï
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¡ËÛù
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(á‘Ð©þÿÿÿÿ
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(í‹à¤üÿÿÿÿ
+V	java:S125,"<This block of commented-out lines of code should be removed.(„£ËÂûÿÿÿÿ
+Q	java:S125R"<This block of commented-out lines of code should be removed.(—’üú
+H
+java:S1144x"2Remove this unused private "connectServer" method.(ª¼Î“

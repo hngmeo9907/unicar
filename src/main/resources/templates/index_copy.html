@@ -1,0 +1,1756 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<head>
+    <!-- include head.html -->
+    <title>Unicar - Hãng độ xe hàng đầu Việt Nam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <!-- favicon -->
+    <link href="/images/imgs/favicon.ico" type="image/x-icon" rel="icon">
+    <!-- meta social -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="Trang chủ"/>
+    <meta name="twitter:creator" content="Thayer Do"/>
+    <meta property="og:site_name" content="Trang chủ">
+    <meta property="og:type" content="home">
+    <meta property="og:url" content="index.html"/>
+
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <!-- include styles -->
+    <link rel="stylesheet" href="/css/vendor.min.css" type="text/css" async>
+    <link rel="stylesheet" href="/css/datepicker.min.css" type="text/css" async>
+    <link rel="stylesheet" href="/css/style.min.css" type="text/css" async>
+
+    <link href="/css/ninja-slider-24-buong-vip.css" rel="stylesheet" type="text/css" async/>
+    <script src="/css/ninja-slider-24-buong-vip.js" type="text/javascript"></script>
+    <link href="/css/ninja-slider-34-phong-vip.css" rel="stylesheet" type="text/css" async/>
+    <script src="/css/ninja-slider-34-phong-vip.js" type="text/javascript"></script>
+    <link href="/css/ninja-slider-county.css" rel="stylesheet" type="text/css" async/>
+    <script src="/css/ninja-slider-county.js" type="text/javascript"></script>
+    <link href="/css/ninja-slider-solaty.css" rel="stylesheet" type="text/css" async/>
+    <script src="/css/ninja-slider-solaty.js" type="text/javascript"></script>
+    <link href="/css/ninja-slider-ford.css" rel="stylesheet" type="text/css" async/>
+    <script src="/css/ninja-slider-ford.js" type="text/javascript"></script>
+    <link href="/css/ninja-slider-fuso.css" rel="stylesheet" type="text/css" async/>
+    <script src="/css/ninja-slider-fuso.js" type="text/javascript"></script>
+    <!-- include top scripts -->
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/angular.min.js" type="text/javascript"></script>
+    <script src="/js/toastr.min.js" type="text/javascript"></script>
+    <script src="/js/datepicker.min.js" type="text/javascript"></script>
+    <script src="/js/appointment.js" type="text/javascript"></script>
+    <script>
+        var language = 'vi-VN';
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+
+        .modal-content-popup {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+
+        .closeSolaty {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .closeFuso {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .closeFord {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .closeCounty {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close24buong {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close34phong {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .closeSolaty:hover,
+        .closeSolaty:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .closeFuso:hover,
+        .closeFuso:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .closeFord:hover,
+        .closeFord:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .closeCounty:hover,
+        .closeCounty:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close24buong:hover,
+        .close24buong:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .close34phong:hover,
+        .close34phong:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .row > .column {
+            padding: 0 8px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #ninja-slider .caption {
+            position: absolute;
+            top: 100%;
+        }
+
+        #ninja-slider .slider-inner {
+            padding-bottom: 100px !important;
+        }
+
+        #ninja-slider li {
+            margin-bottom: 100px !important;
+        }
+
+        #ninja-slider .slider-inner {
+            padding-bottom: 100px !important;
+        }
+
+        #ninja-slider li {
+            margin-bottom: 100px !important;
+        }
+
+        a {
+            color: #1155CC;
+        }
+
+        ul li {
+            padding: 10px 0;
+        }
+
+        .gallery img {
+            width: 179px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<!-- The Modal -->
+<div id="myModalSolaty" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content-popup">
+        <span class="closeSolaty">&times;</span>
+        <img style="width:100%" src="/images/imgs-unicar/baogiafordsolati.png" alt="">
+    </div>
+</div>
+
+<div id="myModalFuso" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content-popup">
+        <span class="closeFuso">&times;</span>
+        <img style="width:100%" src="/images/imgs-unicar/baogiafordsolati.png" alt="">
+    </div>
+</div>
+
+<div id="myModalFord" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content-popup">
+        <span class="closeFord">&times;</span>
+        <img style="width:100%" src="/images/imgs-unicar/baogiafordsolati.png" alt="">
+    </div>
+</div>
+
+<div id="myModalCounty" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content-popup">
+        <span class="closeCounty">&times;</span>
+        <img style="width:100%" src="/images/imgs-unicar/baogiaxecounty.png" alt="">
+    </div>
+</div>
+
+<div id="myModal24buong" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content-popup">
+        <span class="close24buong">&times;</span>
+        <img style="width:100%" src="/images/imgs-unicar/baogiaxe24buong.png" alt="">
+    </div>
+</div>
+
+<div id="myModal34phong" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content-popup">
+        <span class="close34phong">&times;</span>
+        <img style="width:100%" src="/images/imgs-unicar/baogiaxe34phong.png" alt="">
+    </div>
+</div>
+<!-- End The Modal -->
+
+<!-- Slide show County -->
+<div style="display:none;">
+    <div id="ninja-slider-county" th:switch="${county}">
+        <h2 th:case="null">No media yet!</h2>
+        <div class="slider-inner" th:case="*">
+            <ul th:each="media : ${county}">
+                <li>
+                    <a class="ns-img" href="${media.url}"></a>
+                </li>
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/1.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/2.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/3.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/4.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/5.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/6.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/7.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/8.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/9.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/10.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/11.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/12.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/13.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/14.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/15.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/16.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/17.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/18.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/19.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/20.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/21.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/22.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/23.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/24.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/25.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/26.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/27.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhcounty/28.jpg"></a>-->
+                <!--                </li>-->
+            </ul>
+            <div id="fsBtnCounty" class="fs-icon" title="Expand/Close"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide show Ford Transit -->
+<div style="display:none;">
+    <div id="ninja-slider-ford" th:switch="${fordtransit}">
+        <h2 th:case="null">No media yet!</h2>
+        <div class="slider-inner" th:case="*">
+            <ul th:each="media : ${fordtransit}">
+                <li>
+                    <a class="ns-img" href="${media.url}"></a>
+                </li>
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/1.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/2.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/3.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/4.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/5.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/6.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/7.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/8.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/9.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/10.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/10.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/11.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/12.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/13.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/14.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/15.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/16.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfordtransit/fordcaocap/17.jpg"></a>-->
+                <!--                </li>-->
+            </ul>
+            <div id="fsBtnFord" class="fs-icon" title="Expand/Close"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide show Fuso -->
+<div style="display:none;">
+    <div id="ninja-slider-fuso" th:switch="${fuso}">
+        <h2 th:case="null">No media yet!</h2>
+        <div class="slider-inner" th:case="*">
+            <ul th:each="media : ${fuso}">
+                <li>
+                    <a class="ns-img" href="${media.url}"></a>
+                </li>
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfuso/2.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfuso/3.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfuso/4.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfuso/5.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfuso/6.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfuso/7.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfuso/8.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfuso/9.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfuso/10.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfuso/11.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfuso/12.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhfuso/1632583503220213582.mp4"></a>-->
+                <!--                </li>-->
+            </ul>
+            <div id="fsBtnFuso" class="fs-icon" title="Expand/Close"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide show Solaty -->
+<div style="display:none;">
+    <div id="ninja-slider-solaty" th:switch="${solati}">
+        <h2 th:case="null">No media yet!</h2>
+        <div class="slider-inner" th:case="*">
+            <ul th:each="media : ${solati}">
+                <li>
+                    <a class="ns-img" href="${media.url}"></a>
+                </li>
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhsolaty/1.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhsolaty/2.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhsolaty/3.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhsolaty/4.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhsolaty/5.JPG"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhsolaty/6.JPG"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhsolaty/7.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anhsolaty/8.jpg"></a>-->
+                <!--                </li>-->
+            </ul>
+            <div id="fsBtnSolaty" class="fs-icon" title="Expand/Close"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide show 24 buồng vip -->
+<div style="display:none;">
+    <div id="ninja-slider-24-buong-vip" th:switch="${vip24buong}">
+        <h2 th:case="null">No media yet!</h2>
+        <div class="slider-inner" th:case="*">
+            <ul th:each="media : ${vip24buong}">
+                <li>
+                    <a class="ns-img" href="${media.url}"></a>
+                </li>
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anh24buongvip/1.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anh24buongvip/4eeae8e1b1e04cbe15f1.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anh24buongvip/565a72512b50d60e8f41.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anh24buongvip/9379026a0393e3cdba82.jpg"></a>-->
+                <!--                </li>-->
+            </ul>
+            <div id="fsBtn24buongvip" class="fs-icon" title="Expand/Close"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide show 34 phòng vip -->
+<div style="display:none;">
+    <div id="ninja-slider-34-phong-vip" th:switch="${vip34phong}">
+        <h2 th:case="null">No media yet!</h2>
+        <div class="slider-inner" th:case="*">
+            <ul th:each="media : ${vip34phong}">
+                <li>
+                    <a class="ns-img" href="${media.url}"></a>
+                </li>
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anh34phongvip/1.JPG"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img" href="/images/imgs-unicar/anh34phongvip/DAO_7999.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z2640655043078_9fa64100ca5533d782e11711889420b0.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z2640655055153_e1dee6057d0c5fd49519a5f7911df1b8.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3105652518171_6a26331d01f506988d1e507d8cd67d89.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3280543311742_f9566601043d3452be7ed3f33882bce7.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3280543355730_961efcc66f78265157966625ca6fa8e3 - Copy.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3280543368063_f643baaffef72fbe8aa4eb50f06f569f.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692224236_a5dadfb5cff5800d2e3c5cd55fb280d5.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692233321_ed71eeeb01ae138b44628c79630685cd.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692241127_e92b91735ccdb9c1196acab472299e3e.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692250462_55cb67763b156549e70ac9b2f4ec7312.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692255439_af17ae045937bdfc43e779f215a84d28.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692257404_05795f7f1897988c4f72ae2d006233a8.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692258255_8c9f8c5ef9acd90beaaf2dfd770625c1.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692262234_86db7080510cb27b7f8b7abf56b76667.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692284508_31c8eece8274ecb2423842f5f46b7695.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692298381_28701eb63d1e60fe50e5c016691bd219.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692302810_c5930eac884e4dd8edc84f1a99ebe110.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692316183_13aefa7c945ba0570ab7cf34593f640d.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692326212_9e9445c7b90e435a475ffd06dd712631.jpg"></a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                    <a class="ns-img"-->
+                <!--                       href="/images/imgs-unicar/anh34phongvip/z3333692331203_90e8d156e97559fda945c877a1035202.jpg"></a>-->
+                <!--                </li>-->
+            </ul>
+            <div id="fsBtn34phongvip" class="fs-icon" title="Expand/Close"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="load-page" style="display:none;">
+    <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+<div class="wrapper" ng-app="LimoVip">
+    <!-- include header.html -->
+
+    <header class="header-container">
+        <div class="header-content">
+            <div class="container-fluid">
+                <div class="header-content-center">
+                    <div class="header-menu-logo">
+                        <a href="index.html" class="logo-default">
+                            <!--                            <img src="../static/images/imgs-unicar/logo.png" alt="" class="logo-color img-responsive">-->
+                            <img src="../static/images/imgs-unicar/logo.png"  alt="" class="logo-color img-responsive" th:src="@{/images/imgs-unicar/logo.png}">
+                        </a>
+                    </div>
+                </div>
+                <div class="header-top-content">
+                    <div class="header-content-menu-center header-main-menu">
+                        <div class="header-menu row" id="am-navbar">
+                            <div class="menu-partial col-md-6">
+                                <ul class="nav-bar">
+                                    <li class="active">
+                                        <a href="index.html">TRANG CHỦ</a>
+                                    </li>
+
+                                    <li class="">
+                                        <!-- <a href="gioi-thieu/index.html">GIỚI THIỆU</a> -->
+                                        <a href="#">GIỚI THIỆU</a>
+                                    </li>
+                                    <li class="has-sub">
+                                        <!-- <a href="xe-vip-ca-nhan/index.html">GÓI ĐỘ</a> -->
+                                        <a href="#">GÓI ĐỘ</a>
+
+                                        <ul class="sub-menu1 animated fadeIn">
+                                            <li class="nav-dropdown-item">
+                                                <!-- <a href="xe-vip-ca-nhan/nang-doi-ngoai-that-lexus-lx570-2008-len-2015-ban-trung-dong/index.html" class="nav-dropdown-link">Solaty</a> -->
+                                                <a href="#aboutus-image" id="myBtnSolaty" class="nav-dropdown-link">Solaty</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <!-- <a href="xe-vip-ca-nhan/do-noi-that-xe-lexus-lx-570-danh-cho-doanh-nhan/index.html" class="nav-dropdown-link">Fuso</a> -->
+                                                <a href="#aboutus-image" id="myBtnFuso"
+                                                   class="nav-dropdown-link">Fuso</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <!-- <a href="xe-vip-ca-nhan/noi-that-land-cruiser-len-ban-do-trung-dong/index.html" class="nav-dropdown-link">Ford Transit</a> -->
+                                                <a href="#aboutus-image" id="myBtnFord" class="nav-dropdown-link">Ford
+                                                    Transit</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <!-- <a href="xe-vip-ca-nhan/land-cruiser-phong-cach-mercedes-benz-maybach-s650/index.html" class="nav-dropdown-link">County</a> -->
+                                                <a href="#aboutus-image" id="myBtnCounty" class="nav-dropdown-link">County</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <!-- <a href="xe-vip-ca-nhan/do-xe-land-cruiser-len-bo-ghe-chu-tich-phien-ban-trung-dong/index.html" class="nav-dropdown-link">24 buồng</a> -->
+                                                <a href="#aboutus-image" id="myBtn24buong" class="nav-dropdown-link">24
+                                                    buồng</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <!-- <a href="xe-vip-ca-nhan/ford-explore-phong-cach-doanh-nhan/index.html" class="nav-dropdown-link">34 phòng</a> -->
+                                                <a href="#aboutus-image" id="myBtn34phong" class="nav-dropdown-link">34
+                                                    phòng</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="menu-partial col-md-6">
+                                <ul class="nav-bar">
+                                    <li class=" has-sub">
+                                        <!-- <a href="xe-doanh-nghiep-dich-vu/index.html">BÀI VIẾT</a> -->
+                                        <a href="#">BÀI VIẾT</a>
+
+                                        <ul class="sub-menu1 animated fadeIn">
+                                            <li class="nav-dropdown-item">
+                                                <a href="#" class="nav-dropdown-link">Độ xe</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <a href="#" class="nav-dropdown-link">Độ xe</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <a href="#" class="nav-dropdown-link">Độ xe</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <a href="#" class="nav-dropdown-link">Độ xe</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <a href="#" class="nav-dropdown-link">Độ xe</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <a href="#" class="nav-dropdown-link">Độ xe</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class=" has-sub">
+                                        <!-- <a href="dich-vu/index.html">KHÁCH HÀNG</a> -->
+                                        <a href="#">KHÁCH HÀNG</a>
+
+                                        <ul class="sub-menu1 animated fadeIn">
+                                            <li class="nav-dropdown-item">
+                                                <a href="#" class="nav-dropdown-link">Khách hàng</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <a href="#" class="nav-dropdown-link">Khách hàng</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <a href="#" class="nav-dropdown-link">Khách hàng</a>
+                                            </li>
+                                            <li class="nav-dropdown-item">
+                                                <a href="#" class="nav-dropdown-link">Khách hàng</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <!-- <a href="lien-he/index.html">LI&#202;N HỆ</a> -->
+                                        <a href="#">LI&#202;N HỆ</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-container mobile-nav">
+                        <div class="menu-mobile-nav navbar-toggle">
+                                <span class="icon-bar">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </span>
+                            <div class="right-icon">
+                                <a href="https://www.facebook.com/" target="_blank" class="icon-item">
+                                    <img src="/media/1407/facebook.svg">
+                                </a>
+                                <a href="https://zalo.me/0879789886" target="_blank" class="icon-item">
+                                    <img src="/media/1408/zalo.png">
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div id="cssmenu" class="animated">
+                            <div class="container">
+                                <div class="uni-nav-mobile-header">
+                                    <div class="container">
+                                        <div class="mobile-menu-logo">
+                                            <a href="index.html" class="logo-default">
+                                                <img src="/media/2242/logo-chen-anh3d4f.png?height=58&amp;mode=crop"
+                                                     alt="" class="logo-color img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="uni-icon-close">
+                                            <span class="fa fa-times"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="uni-nav-mobile-content">
+                                    <div class="form-search-wrapper-mobile">
+                                        <div class="input-group">
+                                            <input id="text-mobile-search" type="text" class="form-control"
+                                                   placeholder="T&#236;m kiếm">
+                                            <span class="input-group-addon" onclick="submitMobileSearch(event)">
+                                                    <i class="fa fa-search"></i>
+                                                </span>
+                                        </div>
+                                    </div>
+                                    <ul class="nav navbar-nav">
+                                        <li class="active">
+                                            <a href="index.html">TRANG CHỦ</a>
+                                        </li>
+
+                                        <li class="">
+                                            <!-- <a href="gioi-thieu/index.html">GIỚI THIỆU</a> -->
+                                            <a href="#">GIỚI THIỆU</a>
+                                        </li>
+                                        <li class="has-sub">
+                                            <!-- <a href="xe-vip-ca-nhan/index.html">GÓI ĐỘ</a> -->
+                                            <a href="#">GÓI ĐỘ</a>
+
+                                            <ul class="sub-menu1 animated fadeIn">
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">N&#226;ng đời ngoại thất lexus
+                                                        LX570 2008 l&#234;n 2015 bản Trung Đ&#244;ng</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Độ nội thất xe Lexus LX 570 d&#224;nh
+                                                        cho doanh nh&#226;n</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">NỘI THẤT LAND CRUISER L&#202;N
+                                                        BẢN ĐỘ TRUNG Đ&#212;NG</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Land cruiser phong c&#225;ch
+                                                        Mercedes - Benz Maybach S650</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">ĐỘ XE LAND CRUISER L&#202;N BỘ
+                                                        GHẾ CHỦ TỊCH PHI&#202;N BẢN TRUNG Đ&#212;NG</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">FORD EXPLORE - PHONG C&#193;CH
+                                                        DOANH NH&#194;N</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class=" has-sub">
+                                            <a href="#">DỊCH VỤ</a>
+
+                                            <ul class="sub-menu1 animated fadeIn">
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Solati President</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Huyndai Limousine Starex</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Transit Limousine President -
+                                                        10 Chỗ</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Transit limousine Hạng Thương
+                                                        Gia PLUS - 10 Chỗ</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Transit Limousine Hạng Thương
+                                                        Gia - 10 Chỗ</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Huyndai Solati Hạng Thương gia
+                                                        Cao Cấp - 10 chỗ</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Huyndai Solati Limousine Hạng
+                                                        Thương Gia - 12 chỗ</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Huyndai Solati luxury 16
+                                                        chỗ</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class=" has-sub">
+                                            <a href="#">KHÁCH HÀNG</a>
+
+                                            <ul class="sub-menu1 animated fadeIn">
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Cung cấp c&#225;c d&#242;ng xe
+                                                        Limousine</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Chế tạo, n&#226;ng cấp nội
+                                                        thất</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">N&#226;ng cấp xe Limousine
+                                                        đẳng cấp</a>
+                                                </li>
+                                                <li class="nav-dropdown-item">
+                                                    <a href="#" class="nav-dropdown-link">Độ cửa l&#249;a tự động</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="">
+                                            <a href="#">LI&#202;N HỆ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="uni-nav-mobile-bottom">
+                                    <div class="container">
+                                            <span class="host-line">
+                    <span>HOTLINE: <a href="tel:0879 789 886"> 0879 789 886</a></span>
+                                            </span>
+
+                                    </div>
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+
+                        <script>
+                            function submitMobileSearch(e) {
+                                e.preventDefault();
+                                window.location.href = "https://unicarlimousine.vn/tim-kiem/?q=" + $("#text-mobile-search").val().replace(/ /g, "+");
+                            }
+
+                            $('#text-mobile-search').keypress(function (e) {
+                                if (e.which == 13) {
+                                    submitMobileSearch(event);
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Body-->
+
+    <!-- include banner.html -->
+    <section class="banner-container first-section">
+        <div class="banner-full-width">
+            <div id="home-banner-slide" class="home-banner-slide owl-carousel owl-theme">
+                <div class="banner-item">
+                    <div class="banner-image">
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 575px)"
+                                        srcset="/media/1788/land2.jpg?width=575&height=300&mode=crop">
+                                <source media="(max-width: 768px)"
+                                        srcset="/media/1788/land2.jpg?width=768&height=380&mode=crop">
+                                <source media="(max-width: 1199px)"
+                                        srcset="/media/1788/land2.jpg?width=1190&height=538&mode=crop">
+                                <img style="height: 750px;" class="limo-banner-image"
+                                     src="http://unicarlimousine.vn/imgs-unicar/anhvoikhachhang/DAO_8112.jpg">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner-item">
+                    <div class="banner-image">
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 575px)"
+                                        srcset="/media/1792/prado.jpg?width=575&height=300&mode=crop">
+                                <source media="(max-width: 768px)"
+                                        srcset="/media/1792/prado.jpg?width=768&height=380&mode=crop">
+                                <source media="(max-width: 1199px)"
+                                        srcset="/media/1792/prado.jpg?width=1190&height=538&mode=crop">
+                                <img style="height: 750px;" class="limo-banner-image"
+                                     src="http://unicarlimousine.vn/imgs-unicar/anhvoikhachhang/JULY1204.jpg">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner-item">
+                    <div class="banner-image">
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 575px)"
+                                        srcset="/media/1793/trailblazer.jpg?width=575&height=300&mode=crop">
+                                <source media="(max-width: 768px)"
+                                        srcset="/media/1793/trailblazer.jpg?width=768&height=380&mode=crop">
+                                <source media="(max-width: 1199px)"
+                                        srcset="/media/1793/trailblazer.jpg?width=1190&height=538&mode=crop">
+                                <img style="height: 750px;" class="limo-banner-image"
+                                     src="http://unicarlimousine.vn/imgs-unicar/anh24buongvip/1.jpg">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner-item">
+                    <div class="banner-image">
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 575px)"
+                                        srcset="/media/1794/starex.jpg?width=575&height=300&mode=crop">
+                                <source media="(max-width: 768px)"
+                                        srcset="/media/1794/starex.jpg?width=768&height=380&mode=crop">
+                                <source media="(max-width: 1199px)"
+                                        srcset="/media/1794/starex.jpg?width=1190&height=538&mode=crop">
+                                <img style="height: 750px;" class="limo-banner-image"
+                                     src="http://unicarlimousine.vn/imgs-unicar/anh34phongvip/1.JPG">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner-item">
+                    <div class="banner-image">
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 575px)"
+                                        srcset="/media/1788/land2.jpg?width=575&height=300&mode=crop">
+                                <source media="(max-width: 768px)"
+                                        srcset="/media/1788/land2.jpg?width=768&height=380&mode=crop">
+                                <source media="(max-width: 1199px)"
+                                        srcset="/media/1788/land2.jpg?width=1190&height=538&mode=crop">
+                                <img style="height: 750px;" class="limo-banner-image"
+                                     src="http://unicarlimousine.vn/imgs-unicar/anhcounty/269910563_947112699536584_5379617029342675681_n.jpg">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner-item">
+                    <div class="banner-image">
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 575px)"
+                                        srcset="/media/1788/land2.jpg?width=575&height=300&mode=crop">
+                                <source media="(max-width: 768px)"
+                                        srcset="/media/1788/land2.jpg?width=768&height=380&mode=crop">
+                                <source media="(max-width: 1199px)"
+                                        srcset="/media/1788/land2.jpg?width=1190&height=538&mode=crop">
+                                <img style="height: 750px;" class="limo-banner-image"
+                                     src="http://unicarlimousine.vn/imgs-unicar/anhfordtransit/fordcaocap/8.jpg">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner-item">
+                    <div class="banner-image">
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 575px)"
+                                        srcset="/media/1788/land2.jpg?width=575&height=300&mode=crop">
+                                <source media="(max-width: 768px)"
+                                        srcset="/media/1788/land2.jpg?width=768&height=380&mode=crop">
+                                <source media="(max-width: 1199px)"
+                                        srcset="/media/1788/land2.jpg?width=1190&height=538&mode=crop">
+                                <img style="height: 750px;" class="limo-banner-image"
+                                     src="http://unicarlimousine.vn/imgs-unicar/anhfuso/10.jpg">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner-item">
+                    <div class="banner-image">
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 575px)"
+                                        srcset="/media/1788/land2.jpg?width=575&height=300&mode=crop">
+                                <source media="(max-width: 768px)"
+                                        srcset="/media/1788/land2.jpg?width=768&height=380&mode=crop">
+                                <source media="(max-width: 1199px)"
+                                        srcset="/media/1788/land2.jpg?width=1190&height=538&mode=crop">
+                                <img style="height: 750px;" class="limo-banner-image"
+                                     src="http://unicarlimousine.vn/imgs-unicar/anhsolaty/6.JPG">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end banner -->
+
+    <section class="hotline-container container">
+        <div class="item-content row">
+
+            <div class="col-md-4 item">
+                <p><img src="/images/imgs/icons/price.svg" alt="" class="img-responsive"> <a href="#">Mức gi&#225; và
+                    dịch vụ tốt nhất hiện nay</a></p>
+            </div>
+            <div class="col-md-4 hotline">
+                <div class="hotline-box"></div>
+                <p><img src="/images/imgs/icons/hotline.svg" alt="" class="img-responsive"> <a href="tel:0879789886">0879
+                    789 886</a></p>
+            </div>
+            <div class="col-md-4 item">
+                <p><img src="/images/imgs/icons/cart.svg" alt="" class="img-responsive"> <a class="nav-modal"
+                                                                                            id="order-now-btn">Đặt h&#224;ng
+                    ngay</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="aboutus-container section-content container">
+
+        <div class="aboutus-image" id="aboutus-image">
+            <picture>
+                <source media="(max-width: 575px)" srcset="/media/1852/wp8210291.jpg?width=500&mode=crop">
+                <source media="(max-width: 767px)" srcset="/media/1852/wp8210291.jpg?width=510&mode=crop">
+                <source media="(max-width: 991px)" srcset="/media/1852/wp8210291.jpg?width=690&mode=crop">
+                <img class="limo-banner-image"
+                     src="/images/imgs-unicar/anhcounty/z3333696901520_67d77a57d77486b1b5b86e3c8e306d6a.jpg">
+            </picture>
+        </div>
+        <div class="aboutus-content">
+            <div class="section-head-title">
+                <h1>HÃNG ĐỘ UNICAR</h1>
+                <div class="section-head-border"></div>
+            </div>
+            <div class="aboutus-summary">
+                <p>Thương hiệu lớn chuy&#234;n về lĩnh vực n&#226;ng cấp nội thất xe Limousine, Solati, Fuso, Ford
+                    Transit, xe 24 phòng.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="limo-list-container section-content">
+        <div class="container">
+            <div class="section-head-title">
+                <h2>Danh sách mẫu xe</h2>
+                <div class="section-head-border"></div>
+            </div>
+            <div class="limo-list row">
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="limo-image" onclick="lightboxCounty(0)">
+                        <img src="/images/imgs-unicar/anhcounty/z3333696858374_5f39df78de5aeb55096150f3dd59a6cb.jpg"
+                             alt="" class="img-responsive">
+                        <img src="/images/imgs-unicar/anhcounty/zz" alt="" class="img-responsive">
+                    </a>
+                    <div class="limo-content">
+                        <a href="#">
+                            <h2 class="limo-title">County Limousine</h2>
+                        </a>
+                        <p class="limo-summary"></p>
+                        <div class="limo-tag">
+                            <a href="#" class="btn btn-tag">Gi&#225;: Li&#234;n Hệ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="limo-image" onclick="lightboxFord(0)">
+                        <img src="/images/imgs-unicar/anhfordtransit/fordthuonggia/24.jpg" alt=""
+                             class="img-responsive">
+                    </a>
+                    <div class="limo-content">
+                        <a href="#">
+                            <h2 class="limo-title">Ford Transit</h2>
+                        </a>
+                        <p class="limo-summary"></p>
+                        <div class="limo-tag">
+                            <a href="#" class="btn btn-tag">Gi&#225;: Li&#234;n Hệ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="limo-image" onclick="lightboxFuso(0)">
+                        <img src="/images/imgs-unicar/anhfuso/7.jpg" alt="" class="img-responsive">
+                    </a>
+                    <div class="limo-content">
+                        <a href="#">
+                            <h2 class="limo-title">Fuso</h2>
+                        </a>
+                        <p class="limo-summary"></p>
+                        <div class="limo-tag">
+                            <a href="#" class="btn btn-tag">Gi&#225;: Li&#234;n Hệ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="limo-image" onclick="lightboxSolaty(0)">
+                        <img src="/images/imgs-unicar/anhsolaty/6.JPG" alt="" class="img-responsive">
+                    </a>
+                    <div class="limo-content">
+                        <a href="#">
+                            <h2 class="limo-title">Solati</h2>
+                        </a>
+                        <p class="limo-summary"></p>
+                        <div class="limo-tag">
+                            <a href="#" class="btn btn-tag">Gi&#225;: Li&#234;n Hệ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="limo-image" onclick="lightbox24buongvip(0)">
+                        <img src="/images/imgs-unicar/anh24buongvip/1.jpg" alt="" class="img-responsive">
+                    </a>
+                    <div class="limo-content">
+                        <a href="#">
+                            <h2 class="limo-title">24 buồng VIP</h2>
+                        </a>
+                        <p class="limo-summary"></p>
+                        <div class="limo-tag">
+                            <a href="#" class="btn btn-tag">Gi&#225;: Li&#234;n Hệ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <a class="limo-image" onclick="lightbox34phongvip(0)">
+                        <img src="/images/imgs-unicar/anh34phongvip/z2640655043078_9fa64100ca5533d782e11711889420b0.jpg"
+                             alt="" class="img-responsive">
+                    </a>
+                    <div class="limo-content">
+                        <a href="#">
+                            <h2 class="limo-title">34 phòng VIP</h2>
+                        </a>
+                        <p class="limo-summary"></p>
+                        <div class="limo-tag">
+                            <a href="#" class="btn btn-tag">Gi&#225;: Li&#234;n Hệ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="section-nav">
+                <a class="section-nav-detail" href="xe-vip-ca-nhan/index.html">XEM TẤT CẢ</a>
+            </div> -->
+        </div>
+    </section>
+
+    <section class="videos-container section-content gray-background">
+        <div class="container">
+            <div class="row">
+                <div class="half-content col-md-6">
+                    <div class="section-head-title">
+                        <h2>Video</h2>
+                        <div class="section-head-border"></div>
+                    </div>
+                    <div class="video-content">
+                        <div class="row">
+                            <div class="col-md-6 video-item">
+                                <div class="video-image">
+                                    <img src="/images/imgs-unicar/anhfordtransit/fordthuonggia/27.jpg"
+                                         alt="img-responsive">
+                                    <a class="play-video" href="/images/imgs-unicar/VIDEO/fordbancaocap.mp4"
+                                       target="_self">
+                                        <img src="/images/imgs/icons/play.svg" alt="">
+                                    </a>
+                                </div>
+                                <h4 class="video-title">VIDEO XE FORD</h4>
+                            </div>
+                            <div class="col-md-6 video-item">
+                                <div class="video-image">
+                                    <img src="/images/imgs-unicar/anhfuso/7.jpg" alt="img-responsive">
+                                    <a class="play-video" href="/images/imgs-unicar/VIDEO/FUSO.mp4">
+                                        <img src="/images/imgs/icons/play.svg" alt="">
+                                    </a>
+                                </div>
+                                <h4 class="video-title">VIDEO XE FUSO</h4>
+                            </div>
+                            <div class="col-md-6 video-item">
+                                <div class="video-image">
+                                    <img src="/images/imgs-unicar/anhsolaty/6.JPG" alt="img-responsive">
+                                    <a class="play-video" href="/images/imgs-unicar/VIDEO/clipxeCounty.mp4">
+                                        <img src="/images/imgs/icons/play.svg" alt="">
+                                    </a>
+                                </div>
+                                <h4 class="video-title">VIDEO XE SOLATI</h4>
+                            </div>
+                            <div class="col-md-6 video-item">
+                                <div class="video-image">
+                                    <img src="/images/imgs-unicar/anhcounty/z3333696858374_5f39df78de5aeb55096150f3dd59a6cb.jpg"
+                                         alt="img-responsive">
+                                    <a class="play-video" href="/images/imgs-unicar/VIDEO/COUNTY.mp4">
+                                        <img src="/images/imgs/icons/play.svg" alt="">
+                                    </a>
+                                </div>
+                                <h4 class="video-title">VIDEO XE COUNTY</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="half-content col-md-6">
+                    <div class="section-head-title">
+                        <h2>Bài viết nổi bật</h2>
+                        <div class="section-head-border"></div>
+                    </div>
+                    <div class="news-content">
+                        <div class="row news-item">
+                            <div class="col-sm-5">
+                                <!-- <a href="tin-tuc/xu-huong-do-ghe-chu-tich-tren-cac-dong-xe-sang-tai-viet-nam/index.html"> -->
+                                <a href="#">
+                                    <picture>
+                                        <source media="(max-width: 575px)"
+                                                srcset="/media/2227/z2952019462435_69d0d51be587758b0b4f97fed940da77365a.jpg?500&amp;height=260&amp;mode=crop">
+                                        <source media="(max-width: 991px)"
+                                                srcset="/media/2227/z2952019462435_69d0d51be587758b0b4f97fed940da77a0e1.jpg?width=120&amp;height=80&amp;mode=crop">
+                                        <img src="/images/imgs-unicar/anhnhaxuong/1.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="news-summary col-sm-7">
+                                <h4 class="news-title"
+                                    title="XU HƯỚNG ĐỘ GHẾ CHỦ TỊCH TR&#202;N  C&#193;C D&#210;NG XE SANG TẠI VIỆT NAM">
+                                    <a href="#">
+                                        Gói độ Ford mẫu mới 2022
+                                    </a>
+                                </h4>
+                                <p class="post-date">20 Tháng 4, 2022</p>
+                            </div>
+                        </div>
+                        <div class="row news-item">
+                            <div class="col-sm-5">
+                                <!-- <a href="tin-tuc/phong-thuy-xe-hoi-bi-quyet-cua-nhung-doanh-nhan-thanh-dat/index.html"> -->
+                                <a href="#">
+                                    <picture>
+                                        <source media="(max-width: 575px)"
+                                                srcset="/media/2207/banner-email-marketing365a.jpg?500&amp;height=260&amp;mode=crop">
+                                        <source media="(max-width: 991px)"
+                                                srcset="/media/2207/banner-email-marketinga0e1.jpg?width=120&amp;height=80&amp;mode=crop">
+                                        <img src="/images/imgs-unicar/anh24buongvip/1.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="news-summary col-sm-7">
+                                <h4 class="news-title"
+                                    title="PHONG THUỶ XE HƠI - B&#205; QUYẾT CỦA NHỮNG DOANH NH&#194;N TH&#192;NH ĐẠT">
+                                    <a href="#">
+                                        Đánh giá chi tiết gói độ Solaty
+                                    </a>
+                                </h4>
+                                <p class="post-date">20 Tháng 4, 2022</p>
+                            </div>
+                        </div>
+                        <div class="row news-item">
+                            <div class="col-sm-5">
+                                <!-- <a href="tin-tuc/hang-do-xe-limousine-uy-tin-chuyen-nghiep-mang-ten-empire-limousine/index.html"> -->
+                                <a href="#">
+                                    <picture>
+                                        <source media="(max-width: 575px)"
+                                                srcset="/media/1611/19365a.jpg?500&amp;height=260&amp;mode=crop">
+                                        <source media="(max-width: 991px)"
+                                                srcset="/media/1611/19a0e1.jpg?width=120&amp;height=80&amp;mode=crop">
+                                        <img src="/images/imgs-unicar/anh24buongvip/4eeae8e1b1e04cbe15f1.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="news-summary col-sm-7">
+                                <h4 class="news-title"
+                                    title="H&#227;ng độ xe Limousine uy t&#237;n, chuy&#234;n nghiệp mang t&#234;n Empire Limousine">
+                                    <a href="#">
+                                        Tìm hiểu về các gói độ mới Unicar 2022
+                                    </a>
+                                </h4>
+                                <p class="post-date">20 Tháng 4, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-content" id="light-video-section">
+        <div class="container">
+            <div id="light-video">
+                <a class="box-close" id="box-close" onclick="lightbox_close();"></a>
+                <div id="video-content">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="googleMap" style="width:100%;height:400px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.3663026671397!2d105.85387511493516!3d21.177602785917944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc45fccdf06cb12a2!2zMjHCsDEwJzM5LjQiTiAxMDXCsDUxJzIxLjgiRQ!5e0!3m2!1svi!2s!4v1651301410746!5m2!1svi!2s"
+                width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="">
+        </iframe>
+    </div>
+
+    <footer class="footer-container">
+        <div class="footer-main-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 footer-element-left">
+                        <div class="widget-footer footer-element">
+                            <div class="widget-content">
+                                <div class="company-contact">
+                                    <p>
+                                        <img src="/images/imgs/icons/home.svg" alt="" class="img-responsive">
+                                        <span>Phạm Văn Đồng, Bắc Từ Liêm, Hà Nội</span>
+                                    </p>
+                                    <p>
+                                        <img src="/images/imgs/icons/call-2.svg" alt="" class="img-responsive">
+                                        <span><a>0879 789 886 - 0359 108 333</a></span>
+                                    </p>
+                                    <p>
+                                        <img src="/images/imgs/icons/mail.svg" alt="" class="img-responsive">
+                                        <span><a href="mailto:daimyoto@gmail.com">unicar@gmail.com</a></span>
+                                    </p>
+                                    <p>
+                                        <img src="/images/imgs/icons/global.svg" alt="" class="img-responsive">
+                                        <span><a href="index.html">unicar.vn</a></span>
+                                    </p>
+                                    <p>
+                                        <img src="/images/imgs/icons/face.svg" alt="" class="img-responsive">
+                                        <span><a href="https://www.facebook.com/">Facebook Fanpage</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-3 footer-element menu-widget">
+                                <h3 class="widget-title">VỀ CHÚNG TÔI</h3>
+                                <div class="widget-title-border"></div>
+                                <div class="widget-content">
+                                    <ul class="widget-content-menu">
+                                        <li>
+                                            <!-- <a href="gioi-thieu/index.html">- Giới thiệu</a> -->
+                                            <a href="#">- Giới thiệu</a>
+                                        </li>
+                                        <li>
+                                            <!-- <a href="gioi-thieu/cam-ket-chat-luong/index.html">- Cam kết chất lượng</a> -->
+                                            <a href="#">- Cam kết chất lượng</a>
+                                        </li>
+                                        <li>
+                                            <!-- <a href="gioi-thieu/thong-tin-khuyen-mai/index.html">- Thông tin khuyến mãi</a> -->
+                                            <a href="#">- Thông tin khuyến mãi</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 footer-element menu-widget">
+                                <h3 class="widget-title">CHĂM S&#211;C KH&#193;CH H&#192;NG</h3>
+                                <div class="widget-title-border"></div>
+                                <div class="widget-content">
+                                    <ul class="widget-content-menu">
+                                        <li>
+                                            <!-- <a href="cham-soc-khach-hang/chinh-sach-bao-hanh/index.html">- Ch&#237;nh s&#225;ch bảo h&#224;nh</a> -->
+                                            <a href="#">- Ch&#237;nh s&#225;ch bảo h&#224;nh</a>
+                                        </li>
+                                        <li>
+                                            <!-- <a href="cham-soc-khach-hang/cung-cap-xe-du-an/index.html">- Cung cấp xe, gói độ xe</a> -->
+                                            <a href="#">- Cung cấp xe, gói độ xe</a>
+                                        </li>
+                                        <li>
+                                            <!-- <a href="cham-soc-khach-hang/tu-van-mien-phi/index.html">- Tư vấn miễn ph&#237;</a> -->
+                                            <a href="#">- Tư vấn miễn ph&#237;</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 footer-element menu-widget">
+                                <h3 class="widget-title">DỊCH VỤ</h3>
+                                <div class="widget-title-border"></div>
+                                <div class="widget-content">
+                                    <ul class="widget-content-menu">
+                                        <li>
+                                            <!-- <a href="dich-vu/cung-cap-cac-dong-xe-limousine/index.html">- Cung cấp c&#225;c d&#242;ng xe, gói độ xe</a> -->
+                                            <a href="#">- Cung cấp c&#225;c d&#242;ng xe, gói độ xe</a>
+                                        </li>
+                                        <li>
+                                            <!-- <a href="dich-vu/che-tao-nang-cap-noi-that/index.html">- Chế tạo, n&#226;ng cấp nội thất</a> -->
+                                            <a href="#">- Chế tạo, n&#226;ng cấp nội thất</a>
+                                        </li>
+                                        <li>
+                                            <!-- <a href="dich-vu/nang-cap-xe-limousine-dang-cap/index.html">- N&#226;ng cấp xe đẳng cấp</a> -->
+                                            <a href="#">- N&#226;ng cấp xe đẳng cấp</a>
+                                        </li>
+                                        <li>
+                                            <!-- <a href="dich-vu/do-cua-lua-tu-dong/index.html">- Độ xe</a> -->
+                                            <a href="#">- Độ xe</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <p class="copyright-text">UNICAR - COPYRIGHT &#169; 2021 UNICAR</p>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+
+</div>
+<div id="toTop">
+    <div class="btn btn-totop">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </div>
+</div>
+
+<!-- Call now -->
+<div class="quick-alo-phone quick-alo-color quick-alo-show" id="quick-alo-phoneIcon">
+    <a href="tel:0879789886" title="Liên hệ nhanh">
+        <div class="quick-alo-ph-circle"></div>
+        <div class="quick-alo-ph-circle-fill"></div>
+        <div class="quick-alo-ph-img-circle"></div>
+    </a>
+</div>
+
+<div class="sh-side-options-container">
+    <a href="https://www.facebook.com/unicarlimousine?gidzl=q6zk4D89bqpMTsWJr1QLIj5sRHl84PGGpd1e6iz2mX7B9JvCpKp94PiiFat8Jy0Td2St4ZOtKCvfrGsIGG"
+       target="_blank" class="sh-side-options-item sh-side-options-item-trigger-demos sh-accent-color">
+        <img src="/media/1407/facebook.svg">
+        <p class="sh-side-options-hover">
+            Facebook
+        </p>
+    </a>
+    <a href="https://zalo.me/0879789886" target="_blank"
+       class="sh-side-options-item sh-side-options-item-trigger-demos sh-accent-color">
+        <img src="/media/1408/zalo.png">
+        <p class="sh-side-options-hover">
+            Zalo
+        </p>
+    </a>
+</div>
+
+
+<!-- include bottom scripts -->
+<script src="/js/lightgallery.min.js" type="text/javascript"></script>
+<script src="/js/vendor.min.js" type="text/javascript"></script>
+<script src="/js/script.min.js" type="text/javascript"></script>
+
+<script>
+    // Get the modal
+    var modalSolaty = document.getElementById("myModalSolaty");
+    var modalFuso = document.getElementById("myModalFuso");
+    var modalFord = document.getElementById("myModalFord");
+    var modalCounty = document.getElementById("myModalCounty");
+    var modal24buong = document.getElementById("myModal24buong");
+    var modal34phong = document.getElementById("myModal34phong");
+
+    // Get the button that opens the modal
+    var btnSolaty = document.getElementById("myBtnSolaty");
+    var btnFuso = document.getElementById("myBtnFuso");
+    var btnFord = document.getElementById("myBtnFord");
+    var btnCounty = document.getElementById("myBtnCounty");
+    var btn24buong = document.getElementById("myBtn24buong");
+    var btn34phong = document.getElementById("myBtn34phong");
+
+    // Get the <span> element that closes the modal
+    var spanSolaty = document.getElementsByClassName("closeSolaty")[0];
+    var spanFuso = document.getElementsByClassName("closeFuso")[0];
+    var spanFord = document.getElementsByClassName("closeFord")[0];
+    var spanCounty = document.getElementsByClassName("closeCounty")[0];
+    var span24buong = document.getElementsByClassName("close24buong")[0];
+    var span34phong = document.getElementsByClassName("close34phong")[0];
+
+    // When the user clicks the button, open the modal
+    btnSolaty.onclick = function () {
+        modalSolaty.style.display = "block";
+    }
+    btnFuso.onclick = function () {
+        modalFuso.style.display = "block";
+    }
+    btnFord.onclick = function () {
+        modalFord.style.display = "block";
+    }
+    btnCounty.onclick = function () {
+        modalCounty.style.display = "block";
+    }
+    btn24buong.onclick = function () {
+        modal24buong.style.display = "block";
+    }
+    btn34phong.onclick = function () {
+        modal34phong.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    spanSolaty.onclick = function () {
+        modalSolaty.style.display = "none";
+    }
+    spanFuso.onclick = function () {
+        modalFuso.style.display = "none";
+    }
+    spanFord.onclick = function () {
+        modalFord.style.display = "none";
+    }
+    spanCounty.onclick = function () {
+        modalCounty.style.display = "none";
+    }
+    span24buong.onclick = function () {
+        modal24buong.style.display = "none";
+    }
+    span34phong.onclick = function () {
+        modal34phong.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modalSolaty) {
+            modalSolaty.style.display = "none";
+        }
+        if (event.target == modalFuso) {
+            modalFuso.style.display = "none";
+        }
+        if (event.target == modalFord) {
+            modalFord.style.display = "none";
+        }
+        if (event.target == modalCounty) {
+            modalCounty.style.display = "none";
+        }
+        if (event.target == modal24buong) {
+            modal24buong.style.display = "none";
+        }
+        if (event.target == modal34phong) {
+            modal34phong.style.display = "none";
+        }
+    }
+</script>
+
+<script>
+    function lightboxCounty(idx) {
+        //Show the slider wrapper
+        var ninjaSldrCounty = document.getElementById("ninja-slider-county");
+        ninjaSldrCounty.parentNode.style.display = "block";
+        nsliderCounty.init(idx);
+
+        //Then mimic clicking the fullscreen button to popup the modal
+        var fsBtnCounty = document.getElementById("fsBtnCounty");
+        fsBtnCounty.click();
+    }
+
+    function lightboxFord(idx) {
+        //Show the slider wrapper
+        var ninjaSldrFord = document.getElementById("ninja-slider-ford");
+        ninjaSldrFord.parentNode.style.display = "block";
+        nsliderFord.init(idx);
+
+        //Then mimic clicking the fullscreen button to popup the modal
+        var fsBtnFord = document.getElementById("fsBtnFord");
+        fsBtnFord.click();
+    }
+
+    function lightboxFuso(idx) {
+        //Show the slider wrapper
+        var ninjaSldrFuso = document.getElementById("ninja-slider-fuso");
+        ninjaSldrFuso.parentNode.style.display = "block";
+        nsliderFuso.init(idx);
+
+        //Then mimic clicking the fullscreen button to popup the modal
+        var fsBtnFuso = document.getElementById("fsBtnFuso");
+        fsBtnFuso.click();
+    }
+
+    function lightboxSolaty(idx) {
+        //Show the slider wrapper
+        var ninjaSldrSolaty = document.getElementById("ninja-slider-solaty");
+        ninjaSldrSolaty.parentNode.style.display = "block";
+        nsliderSolaty.init(idx);
+
+        //Then mimic clicking the fullscreen button to popup the modal
+        var fsBtnSolaty = document.getElementById("fsBtnSolaty");
+        fsBtnSolaty.click();
+    }
+
+    function lightbox24buongvip(idx) {
+        //Show the slider wrapper
+        var ninjaSldr24buongvip = document.getElementById("ninja-slider-24-buong-vip");
+        ninjaSldr24buongvip.parentNode.style.display = "block";
+        nslider24buongvip.init(idx);
+
+        //Then mimic clicking the fullscreen button to popup the modal
+        var fsBtn24buongvip = document.getElementById("fsBtn24buongvip");
+        fsBtn24buongvip.click();
+    }
+
+    function lightbox34phongvip(idx) {
+        //Show the slider wrapper
+        var ninjaSldr34phongvip = document.getElementById("ninja-slider-34-phong-vip");
+        ninjaSldr34phongvip.parentNode.style.display = "block";
+        nslider34phongvip.init(idx);
+
+        //Then mimic clicking the fullscreen button to popup the modal
+        var fsBtn34phongvip = document.getElementById("fsBtn34phongvip");
+        fsBtn34phongvip.click();
+    }
+
+    function fsIconClick(isFullscreen, ninjaSldrCounty) {
+        //Note: fsIconClick is the default event handler of the fullscreen button
+        if (isFullscreen) {
+            ninjaSldrCounty.parentNode.style.display = "none";
+        }
+    }
+
+    function fsIconClick(isFullscreen, ninjaSldrFord) {
+        //Note: fsIconClick is the default event handler of the fullscreen button
+        if (isFullscreen) {
+            ninjaSldrFord.parentNode.style.display = "none";
+        }
+    }
+
+    function fsIconClick(isFullscreen, ninjaSldrFuso) {
+        //Note: fsIconClick is the default event handler of the fullscreen button
+        if (isFullscreen) {
+            ninjaSldrFuso.parentNode.style.display = "none";
+        }
+    }
+
+    function fsIconClick(isFullscreen, ninjaSldrSolaty) {
+        //Note: fsIconClick is the default event handler of the fullscreen button
+        if (isFullscreen) {
+            ninjaSldrSolaty.parentNode.style.display = "none";
+        }
+    }
+
+    function fsIconClick(isFullscreen, ninjaSldr24buongvip) {
+        //Note: fsIconClick is the default event handler of the fullscreen button
+        if (isFullscreen) {
+            ninjaSldr24buongvip.parentNode.style.display = "none";
+        }
+    }
+
+    function fsIconClick(isFullscreen, ninjaSldr34phongvip) {
+        //Note: fsIconClick is the default event handler of the fullscreen button
+        if (isFullscreen) {
+            ninjaSldr34phongvip.parentNode.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+
+</html>

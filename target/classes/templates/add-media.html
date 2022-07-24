@@ -1,0 +1,52 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<title>File Upload & Download</title>
+<!-- CSS only -->
+<link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+        crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+<body style="background-color: #f0f4c3">
+
+<div th:if="${success}">
+    <h2 th:text="${success}"/>
+</div>
+
+<div class="container text-center">
+    <div><h1>THÊM ẢNH</h1></div>
+
+    <div class="card" style="width: 80rem;" align="center">
+        <div class="card-body" align="center">
+            <h2 class="card-title">Tải lên Ảnh & Video</h2>
+            <h6 class="text-success">[[${success}]]</h6>
+            <div class="mb-3">
+                <form th:action="@{/upload/v2}" method="post" enctype="multipart/form-data">
+                    <input
+                            class="form-control" name="file" type="file" id="formFile"><br/>
+                    <input
+                            class="form-control" name="type" type="text" id="formType" placeholder="Loại xe"><br/>
+                    <input type="submit" value="Tải lên" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <ul>
+        <li th:each="file : ${files}">
+            <a th:href="${file}" th:text="${file}"/>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

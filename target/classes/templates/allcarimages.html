@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Star Admin</title>
+    <link rel="stylesheet" th:href="@{/vendors/iconfonts/mdi/css/materialdesignicons.min.css}">
+    <link rel="stylesheet" th:href="@{/vendors/css/vendor.bundle.base.css}">
+    <link rel="stylesheet" th:href="@{/vendors/css/vendor.bundle.addons.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="shortcut icon" th:href="@{/images/favicon.png}" />
+</head>
+
+<body>
+    <div>
+        <table class="table table-bordered table-sm">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tiêu đề</th>
+                <th>Ảnh</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+<!--            <tr th:each="l : ${posts}" th:field="${p}">-->
+<!--                <td th:text="${pStat.index+1}"></td>-->
+<!--                <td th:text="${p.title}"></td>-->
+<!--                <td th:text="${p.description}"></td>-->
+<!--                <td th:text="${p.content}"></td>-->
+<!--                <td th:text="${p.updatedDate}"></td>-->
+<!--                <td>-->
+<!--                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>-->
+<!--                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>-->
+<!--                </td>-->
+<!--            </tr>-->
+            <tr>
+                <td>ID</td>
+                <td>FileName</td>
+                <td>
+                    <img src="http://unicarlimousine.vn/imgs-unicar/anhfuso/1.jpg" width="100" height="100">
+                </td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>FileName</td>
+                <td>
+                    <img src="http://unicarlimousine.vn/imgs-unicar/anhfuso/2.jpg" width="100" height="100">
+                </td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>FileName</td>
+                <td>
+                    <img src="http://unicarlimousine.vn/imgs-unicar/anhfuso/3.jpg" width="100" height="100">
+                </td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>FileName</td>
+                <td>
+                    <img src="http://unicarlimousine.vn/imgs-unicar/anhfuso/4.jpg" width="100" height="100">
+                </td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>FileName</td>
+                <td>
+                    <img src="http://unicarlimousine.vn/imgs-unicar/anhfuso/5.jpg" width="100" height="100">
+                </td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>FileName</td>
+                <td>
+                    <img src="http://unicarlimousine.vn/imgs-unicar/anhfuso/6.jpg" width="100" height="100">
+                </td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>FileName</td>
+                <td>
+                    <img src="http://unicarlimousine.vn/imgs-unicar/anhfuso/7.jpg" width="100" height="100">
+                </td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>FileName</td>
+                <td>
+                    <img src="http://unicarlimousine.vn/imgs-unicar/anhfuso/8.jpg" width="100" height="100">
+                </td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>FileName</td>
+                <td>
+                    <img src="http://unicarlimousine.vn/imgs-unicar/anhfuso/19.jpg" width="100" height="100">
+                </td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>FileName</td>
+                <td>
+                    <img src="http://unicarlimousine.vn/imgs-unicar/anhfuso/10.jpg" width="100" height="100">
+                </td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>FileName</td>
+                <td>
+                    <img src="http://unicarlimousine.vn/imgs-unicar/anhfuso/11.jpg" width="100" height="100">
+                </td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>FileName</td>
+                <td>
+                    <img src="http://unicarlimousine.vn/imgs-unicar/anhfuso/12.jpg" width="100" height="100">
+                </td>
+                <td>
+                    <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                    <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

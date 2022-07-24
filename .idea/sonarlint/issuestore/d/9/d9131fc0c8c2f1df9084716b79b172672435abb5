@@ -1,0 +1,25 @@
+
+g	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¬€×ß0
+b
+java:S2259"FA "NullPointerException" could be thrown; "fileName" is nullable here.(´ÿŞD8´€×ß0
+[	java:S899"@Do something with the "boolean" value returned by "setWritable".(²Å†t8»€×ß0
+\	java:S899'";Do something with the "boolean" value returned by "delete".(…¦ªøÿÿÿÿ8¼€×ß0
+p
+java:S4042'"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(…¦ªøÿÿÿÿ8¾€×ß0
+X	java:S125#"<This block of commented-out lines of code should be removed.(ìãÉ“8¾€×ß0
+`	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+[
+java:S2259"FA "NullPointerException" could be thrown; "fileName" is nullable here.(´ÿŞD
+T	java:S899"@Do something with the "boolean" value returned by "setWritable".(²Å†t
+U	java:S899'";Do something with the "boolean" value returned by "delete".(…¦ªøÿÿÿÿ
+i
+java:S4042'"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(…¦ªøÿÿÿÿ
+Q	java:S125#"<This block of commented-out lines of code should be removed.(ìãÉ“
+`	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+[
+java:S2259"FA "NullPointerException" could be thrown; "fileName" is nullable here.(´ÿŞD
+T	java:S899"@Do something with the "boolean" value returned by "setWritable".(²Å†t
+U	java:S899'";Do something with the "boolean" value returned by "delete".(…¦ªøÿÿÿÿ
+i
+java:S4042'"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(…¦ªøÿÿÿÿ
+Q	java:S125#"<This block of commented-out lines of code should be removed.(ìãÉ“

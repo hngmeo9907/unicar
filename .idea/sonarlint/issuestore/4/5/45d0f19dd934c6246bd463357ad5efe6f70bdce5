@@ -1,0 +1,13 @@
+
+‹
+java:S4165&"iRemove this useless assignment; "updatedDate" already holds the assigned value along all execution paths.(ïıòÑúÿÿÿÿ8ÙÃäË‘0
+O
+java:S1172!"2Remove this unused method parameter "createdDate".(‰…„8İÃäË‘0
+Q
+java:S1656&"/Remove or correct this useless self-assignment.(ïıòÑúÿÿÿÿ8ßÃäË‘0
+„
+java:S4165&"iRemove this useless assignment; "updatedDate" already holds the assigned value along all execution paths.(ïıòÑúÿÿÿÿ
+H
+java:S1172!"2Remove this unused method parameter "createdDate".(‰…„
+J
+java:S1656&"/Remove or correct this useless self-assignment.(ïıòÑúÿÿÿÿ

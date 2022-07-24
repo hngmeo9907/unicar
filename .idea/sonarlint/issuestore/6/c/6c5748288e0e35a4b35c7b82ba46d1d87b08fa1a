@@ -1,0 +1,13 @@
+
+t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(çÕ½şÿÿÿÿ
+o	java:S115	"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¬éôí
+R
+java:S3066"<Lower the visibility of this setter or remove it altogether.( ¾‹¿
+R
+java:S3066"<Lower the visibility of this setter or remove it altogether.(Ò’Š¯
+t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(çÕ½şÿÿÿÿ
+o	java:S115	"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¬éôí
+R
+java:S3066"<Lower the visibility of this setter or remove it altogether.( ¾‹¿
+R
+java:S3066"<Lower the visibility of this setter or remove it altogether.(Ò’Š¯

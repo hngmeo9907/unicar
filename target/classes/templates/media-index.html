@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1>DANH SACH ANH</h1>
+    <div th:switch="${county}">
+        <h2 th:case="null">No media yet!</h2>
+        <div th:case="*">
+            <h2>COUNTY</h2>
+            <table style="border: 1px solid black; border-collapse: collapse">
+                <thead>
+                <tr>
+                    <th style="border: 1px solid black; border-collapse: collapse">Id</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Url</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Filename</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Updated Date</th>
+                    <td colspan="2" style="border: 1px solid black; border-collapse: collapse">Action</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="media : ${county}">
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.id}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><img src="${media.url}" alt="unicar"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.filename}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.updatedDate}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><a th:href="@{/edit/{id}(id=${media.id})}">Edit</a></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><a th:href="@{/delete/{id}(id=${media.id})}">Delete</a></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><a href="/signup">Add a new image</a></p>
+    </div>
+
+    <div th:switch="${solati}">
+        <h2 th:case="null">No media yet!</h2>
+        <div th:case="*">
+            <h2>SOLATI</h2>
+            <table style="border: 1px solid black; border-collapse: collapse">
+                <thead>
+                <tr>
+                    <th style="border: 1px solid black; border-collapse: collapse">Id</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Url</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Filename</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Updated Date</th>
+                    <td colspan="2" style="border: 1px solid black; border-collapse: collapse">Action</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="media : ${solati}">
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.id}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><img src="${media.url}" alt="unicar"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.filename}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.updatedDate}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><a th:href="@{/edit/{id}(id=${media.id})}">Edit</a></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><a th:href="@{/delete/{id}(id=${media.id})}">Delete</a></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><a href="/signup">Add a new image</a></p>
+    </div>
+
+    <div th:switch="${fordtransit}">
+        <h2 th:case="null">No media yet!</h2>
+        <div th:case="*">
+            <h2>FORD TRANSIT</h2>
+            <table style="border: 1px solid black; border-collapse: collapse">
+                <thead>
+                <tr>
+                    <th style="border: 1px solid black; border-collapse: collapse">Id</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Url</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Filename</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Updated Date</th>
+                    <td colspan="2" style="border: 1px solid black; border-collapse: collapse">Action</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="media : ${fordtransit}">
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.id}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><img src="${media.url}" alt="unicar"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.filename}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.updatedDate}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><a th:href="@{/edit/{id}(id=${media.id})}">Edit</a></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><a th:href="@{/delete/{id}(id=${media.id})}">Delete</a></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><a href="/signup">Add a new image</a></p>
+    </div>
+
+    <div th:switch="${fuso}">
+        <h2 th:case="null">No media yet!</h2>
+        <div th:case="*">
+            <h2>FUSO</h2>
+            <table style="border: 1px solid black; border-collapse: collapse">
+                <thead>
+                <tr>
+                    <th style="border: 1px solid black; border-collapse: collapse">Id</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Url</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Filename</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Updated Date</th>
+                    <td colspan="2" style="border: 1px solid black; border-collapse: collapse">Action</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="media : ${fuso}">
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.id}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><img src="${media.url}" alt="unicar"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.filename}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.updatedDate}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><a th:href="@{/edit/{id}(id=${media.id})}">Edit</a></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><a th:href="@{/delete/{id}(id=${media.id})}">Delete</a></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><a href="/signup">Add a new image</a></p>
+    </div>
+
+    <div th:switch="${vip24buong}">
+        <h2 th:case="null">No media yet!</h2>
+        <div th:case="*">
+            <h2>24 BUONG VIP</h2>
+            <table style="border: 1px solid black; border-collapse: collapse">
+                <thead>
+                <tr>
+                    <th style="border: 1px solid black; border-collapse: collapse">Id</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Url</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Filename</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Updated Date</th>
+                    <td colspan="2" style="border: 1px solid black; border-collapse: collapse">Action</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="media : ${vip24buong}">
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.id}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><img src="${media.url}" alt="unicar"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.filename}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.updatedDate}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><a th:href="@{/edit/{id}(id=${media.id})}">Edit</a></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><a th:href="@{/delete/{id}(id=${media.id})}">Delete</a></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><a href="/signup">Add a new image</a></p>
+    </div>
+
+    <div th:switch="${vip34phong}">
+        <h2 th:case="null">No media yet!</h2>
+        <div th:case="*">
+            <h2>34 PHONG VIP</h2>
+            <table style="border: 1px solid black; border-collapse: collapse">
+                <thead>
+                <tr>
+                    <th style="border: 1px solid black; border-collapse: collapse">Id</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Url</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Filename</th>
+                    <th style="border: 1px solid black; border-collapse: collapse">Updated Date</th>
+                    <td colspan="2" style="border: 1px solid black; border-collapse: collapse">Action</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="media : ${vip34phong}">
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.id}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><img src="${media.url}" alt="unicar"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.filename}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse" th:text="${media.updatedDate}"></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><a th:href="@{/edit/{id}(id=${media.id})}">Edit</a></th>
+                    <th style="border: 1px solid black; border-collapse: collapse"><a th:href="@{/delete/{id}(id=${media.id})}">Delete</a></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p><a href="/signup">Add a new image</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Star Admin</title>
+    <link rel="stylesheet" th:href="@{/vendors/iconfonts/mdi/css/materialdesignicons.min.css}">
+    <link rel="stylesheet" th:href="@{/vendors/css/vendor.bundle.base.css}">
+    <link rel="stylesheet" th:href="@{/vendors/css/vendor.bundle.addons.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="shortcut icon" th:href="@{/images/favicon.png}" />
+</head>
+
+<body>
+<div class="container mt-5">
+    <h2 align="center">Tất cả bài viết</h2>
+    <table class="table table-bordered table-sm">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Tiêu đề</th>
+            <th>Mô tả</th>
+            <th>Nội dung</th>
+            <th>Ngày chỉnh sửa</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="l : ${posts}" th:field="${p}">
+            <td th:text="${pStat.index+1}"></td>
+            <td th:text="${p.title}"></td>
+            <td th:text="${p.description}"></td>
+            <td th:text="${p.content}"></td>
+            <td th:text="${p.updatedDate}"></td>
+            <td>
+                <a th:href="@{/update/{id}(id=${p.id})}" ><i class="fa fa-edit" ></i></a>
+                <a th:href="@{/delete/{id}(id=${p.id})}" ><i class="fa fa-remove"></i></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
