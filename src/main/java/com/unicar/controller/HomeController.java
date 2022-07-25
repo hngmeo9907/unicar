@@ -13,7 +13,7 @@ public class HomeController {
 
     @GetMapping("/trangchu")
     public String homePage() {
-        return "index";
+        return "index_copy";
     }
 
     @GetMapping("/menubar")

@@ -19,7 +19,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Controller
-@RequestMapping("/media")
+//@RequestMapping("/media")
 public class MediaController {
     @Autowired
     private MediaService mediaSv;
@@ -27,7 +27,7 @@ public class MediaController {
     @Autowired
     private ProductMediaRepository mediaRepo;
 
-    @GetMapping("/index")
+    @GetMapping("/media/index")
     public String showUserList(Model model) {
         model.addAttribute("county", CollectionUtils.isEmpty(mediaSv.getAllMediaByCarType(CarType.COUNTY.getType())) ? new ArrayList<>() : mediaSv.getAllMediaByCarType(CarType.COUNTY.getType()));
         model.addAttribute("solati", CollectionUtils.isEmpty(mediaSv.getAllMediaByCarType(CarType.SOLATI.getType())) ? new ArrayList<>() : mediaSv.getAllMediaByCarType(CarType.SOLATI.getType()));
@@ -39,7 +39,7 @@ public class MediaController {
         model.addAttribute("video", CollectionUtils.isEmpty(mediaSv.getAllVideo()) ? new ArrayList<>() : mediaSv.getAllVideo());
         model.addAttribute("logo", mediaSv.getLogo());
         model.addAttribute("mainImage", mediaSv.getMainImage());
-        return "media-index";
+        return "index_copy";
     }
 
 //    @PostMapping("/addmedia")
